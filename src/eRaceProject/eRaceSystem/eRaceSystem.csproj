@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02204CBC-16D2-42B1-92F2-CD07D46ACDDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eRaceSystem</RootNamespace>
+    <AssemblyName>eRaceSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeCode.Exceptions, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeCode.Exceptions.0.1.1\lib\netstandard2.0\FreeCode.Exceptions.dll</HintPath>
+    </Reference>
+
+    <Reference Include="FreeCode.WebApp, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeCode.WebApp.0.2.1.0\lib\net472\FreeCode.WebApp.dll</HintPath>
+    </Reference>
+
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\eRaceController.cs" />
+    <Compile Include="BLL\Purchasing\PurchasingController.cs" />
+    <Compile Include="BLL\Racing\RacingController.cs" />
+    <Compile Include="BLL\Receiving\ReceivingController.cs" />
+    <Compile Include="BLL\Sales\InvoiceController.cs" />
+    <Compile Include="BLL\Sales\SaleCartItemsController.cs" />
+    <Compile Include="BLL\Sales\SalesController.cs" />
+    <Compile Include="BLL\Sales\StoreRefundController.cs" />
+    <Compile Include="ViewModels\Purchasing\OrderDetailInfo.cs" />
+    <Compile Include="ViewModels\Purchasing\OrderInfo.cs" />
+    <Compile Include="ViewModels\Purchasing\SelectionItem.cs" />
+    <Compile Include="ViewModels\Purchasing\UpdatedOrder.cs" />
+    <Compile Include="ViewModels\Purchasing\UpdatedOrderDetail.cs" />
+    <Compile Include="ViewModels\Purchasing\VendorCatalogInfo.cs" />
+    <Compile Include="ViewModels\Purchasing\VendorInfo.cs" />
+    <Compile Include="ViewModels\Purchasing\VendorProducts.cs" />
+
+    <Compile Include="ViewModels\Receiving\UnorderedInfo.cs" />
+
+    <Compile Include="ViewModels\Sale\CategoryInfo.cs" />
+    <Compile Include="ViewModels\Sale\InvoiceDetailInfo.cs" />
+    <Compile Include="ViewModels\Sale\InvoiceInfo.cs" />
+    <Compile Include="ViewModels\Sale\NewInvoice.cs" />
+    <Compile Include="ViewModels\Sale\NewInvoiceDetail.cs" />
+    <Compile Include="ViewModels\Sale\PaymentRequired.cs" />
+    <Compile Include="ViewModels\Sale\ProductInfo.cs" />
+    <Compile Include="ViewModels\Receiving\ForceCloseDetails.cs" />
+    <Compile Include="ViewModels\Receiving\ForceCloseItems.cs" />
+    <Compile Include="ViewModels\Receiving\OrderDetailInfo.cs" />
+    <Compile Include="ViewModels\Receiving\ProductDetails.cs" />
+    <Compile Include="ViewModels\Receiving\ReceivedOrderDetails.cs" />
+    <Compile Include="ViewModels\Receiving\ReceiveOrderItemDetails.cs" />
+    <Compile Include="ViewModels\Receiving\ReceiveOrdersInfo.cs" />
+    <Compile Include="ViewModels\Receiving\ReturnOrderItemDetails.cs" />
+    <Compile Include="ViewModels\Receiving\VendorContactInfo.cs" />
+    <Compile Include="ViewModels\Sale\RefundDetail.cs" />
+    <Compile Include="ViewModels\Sale\RefundRequired.cs" />
+    <Compile Include="ViewModels\Sale\SaleCartItem.cs" />
+    <Compile Include="ViewModels\Sale\SelectionList.cs" />
+    <Compile Include="BLL\SetupUserRegistrationController.cs" />
+    <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\CarClass.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Certification.cs" />
+    <Compile Include="Entities\DatabaseVersion.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="DAL\eRaceContext.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InvoiceDetail.cs" />
+    <Compile Include="Entities\Member.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderDetail.cs" />
+    <Compile Include="Entities\Position.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Race.cs" />
+    <Compile Include="Entities\RaceDetail.cs" />
+    <Compile Include="Entities\RaceFee.cs" />
+    <Compile Include="Entities\RacePenalty.cs" />
+    <Compile Include="Entities\ReceiveOrder.cs" />
+    <Compile Include="Entities\ReceiveOrderItem.cs" />
+    <Compile Include="Entities\ReturnOrderItem.cs" />
+    <Compile Include="Entities\StoreRefund.cs" />
+    <Compile Include="Entities\UnOrderedItem.cs" />
+    <Compile Include="Entities\Vendor.cs" />
+    <Compile Include="Entities\VendorCatalog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Sale\StoreRefundInfo.cs" />
+    <Compile Include="ViewModels\SetupUserInfo.cs" />
+    <Compile Include="ViewModels\Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UserControls\MessageUserControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
