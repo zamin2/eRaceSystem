@@ -31,10 +31,10 @@ namespace eRaceProject.Subsystem.Receiving
             {
                 Response.Redirect("~/Account/Login", true);
             }               
-            else if (!User.IsInRole(Settings.ClerkRole) || !User.IsInRole(Settings.FoodServiceRole))
-            {
-                Response.Redirect("~/Subsystem/Receiving/Default");
-            }
+            //else if (!User.IsInRole(Settings.ClerkRole) || !User.IsInRole(Settings.FoodServiceRole))
+            //{
+            //    Response.Redirect("~/Subsystem/Receiving/Default");
+            //}
             
         }
 

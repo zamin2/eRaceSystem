@@ -36,9 +36,9 @@ namespace eRaceProject.Subsystem.Purchasing
                 Response.Redirect("~/Account/Login", true);
 
             }
-            else if (!(User.IsInRole(Settings.DirectorRole) || User.IsInRole(Settings.OfficeManagerRole))){
-                Response.Redirect("~/Subsystem/Purchasing/Default");
-            }
+            //else if (!(User.IsInRole(Settings.DirectorRole) || User.IsInRole(Settings.OfficeManagerRole))){
+            //    Response.Redirect("~/Subsystem/Purchasing/Default");
+            //}
 
 
             var controller = new eRaceController();

@@ -47,7 +47,6 @@
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/Subsystem/Purchasing/Purchasing">Purchasing</a></li>
-                    <li class="nav-item"><a class="nav-link" runat="server" href="~/Subsystem/Racing/Default">Racing</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/Subsystem/Receiving/Receiving">Receiving</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/Subsystem/Sales/Sales">Sales</a></li>
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/Subsystem/Sales/Refund">Refund</a></li>

@@ -39,10 +39,10 @@ namespace eRaceProject.Subsystem.Sales
                 Response.Redirect("~/Account/Login", true);
 
             }
-            else if (!User.IsInRole(Settings.ClerkRole))
-            {
-                Response.Redirect("~/Account/Login", true);
-            }
+            //else if (!User.IsInRole(Settings.ClerkRole))
+            //{
+            //    Response.Redirect("~/Account/Login", true);
+            //}
 
             var controller2 = new eRaceController();
             var employee = controller2.GetEmployeeName(EmployeeId);
